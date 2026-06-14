@@ -53,7 +53,7 @@ export default function LandingPage() {
             <img
               src="https://cdn.poehali.dev/projects/407aeb7d-ee5b-46b4-96c3-2b0a3a7bc4ae/bucket/4248953c-3132-4824-9a14-5aeb35a4df76.jpg"
               alt=""
-              className="w-6 h-6 object-contain"
+              className="w-6 h-6 object-contain rounded-full"
               style={{ mixBlendMode: 'multiply' }}
             />
           </button>
