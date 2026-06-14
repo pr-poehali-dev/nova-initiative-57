@@ -47,11 +47,16 @@ export default function LandingPage() {
         {sections.map((section, index) => (
           <button
             key={section.id}
-            className={`w-3 h-3 rounded-full my-2 transition-all ${
-              index === activeSection ? 'bg-[#C194E3] scale-150' : 'bg-neutral-300'
-            }`}
             onClick={() => handleNavClick(index)}
-          />
+            className={`my-1 transition-all duration-300 ${index === activeSection ? 'scale-150' : 'scale-100 opacity-40'}`}
+          >
+            <img
+              src="https://cdn.poehali.dev/projects/407aeb7d-ee5b-46b4-96c3-2b0a3a7bc4ae/bucket/4248953c-3132-4824-9a14-5aeb35a4df76.jpg"
+              alt=""
+              className="w-6 h-6 object-contain"
+              style={{ mixBlendMode: 'multiply' }}
+            />
+          </button>
         ))}
       </nav>
       <motion.div
