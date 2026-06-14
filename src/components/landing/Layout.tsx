@@ -7,7 +7,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="h-screen overflow-hidden relative" style={{ backgroundColor: '#FFFDF0' }}>
+    <div className="h-screen overflow-hidden relative" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="absolute inset-0 z-10">
         <Squares
           direction="diagonal"
