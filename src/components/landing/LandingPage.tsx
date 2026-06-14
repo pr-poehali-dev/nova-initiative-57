@@ -70,6 +70,9 @@ export default function LandingPage() {
           />
         ))}
       </div>
+      <div className="fixed bottom-4 left-0 right-0 flex justify-center z-30">
+        <span className="text-sm text-neutral-500">Выполнила Лукьянова Валерия, 1525д</span>
+      </div>
     </Layout>
   )
 }
