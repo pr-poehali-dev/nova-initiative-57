@@ -64,6 +64,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
               variant="outline"
               size="lg"
               className="text-[#00B5AD] bg-transparent border-[#00B5AD] hover:bg-[#00B5AD] hover:text-white transition-colors"
+              onClick={() => window.open('https://cloud.mail.ru/public/v27L/6dpQjh6xG', '_blank')}
             >
               {buttonText}
             </Button>
