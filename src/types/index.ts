@@ -9,6 +9,7 @@ export interface Section {
   buttonText?: string
   buttonImage?: string
   images?: string[]
+  videoUrl?: string
 }
 
 export interface SectionProps extends Section {
