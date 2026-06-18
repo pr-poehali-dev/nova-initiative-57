@@ -30,7 +30,7 @@ export default function LandingPage() {
         <div className="min-h-screen flex flex-col md:flex-row">
           {/* Левая — Трейлер */}
           <motion.div
-            className="flex-1 flex flex-col justify-center p-8 md:p-14 border-b md:border-b-0 md:border-r border-[#e8e4d0]"
+            className="flex-1 flex flex-col justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#e8e4d0]"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -67,7 +67,7 @@ export default function LandingPage() {
 
           {/* Правая — Презентация */}
           <motion.div
-            className="flex-1 flex flex-col justify-center p-8 md:p-14"
+            className="flex-1 flex flex-col justify-center p-6 md:p-8"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
