@@ -32,7 +32,8 @@ function DvdBounce() {
         top: xy.y,
         width: size,
         height: size,
-        objectFit: 'contain',
+        objectFit: 'cover',
+        borderRadius: '50%',
         mixBlendMode: 'multiply',
       }}
     />
