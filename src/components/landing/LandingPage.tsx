@@ -60,8 +60,8 @@ export default function LandingPage() {
             </Button>
           </motion.div>
 
-          {/* Разделитель по центру (только на мобиле горизонтальный) */}
-          <div className="hidden md:flex items-center px-2">
+          {/* Разделитель */}
+          <div className="hidden md:flex items-center">
             <div className="h-2/3 w-px bg-gradient-to-b from-transparent via-[#C194E3] to-transparent" />
           </div>
 
