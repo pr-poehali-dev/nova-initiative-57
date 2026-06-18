@@ -24,7 +24,7 @@ function DvdBounce() {
 
   return (
     <img
-      src="https://cdn.poehali.dev/projects/407aeb7d-ee5b-46b4-96c3-2b0a3a7bc4ae/bucket/4248953c-3132-4824-9a14-5aeb35a4df76.jpg"
+      src="https://cdn.poehali.dev/projects/407aeb7d-ee5b-46b4-96c3-2b0a3a7bc4ae/bucket/5e228964-5353-406b-b441-d07c7ff40e97.png"
       alt=""
       className="fixed z-20 pointer-events-none select-none"
       style={{
@@ -32,9 +32,7 @@ function DvdBounce() {
         top: xy.y,
         width: size,
         height: size,
-        objectFit: 'cover',
-        borderRadius: '50%',
-        mixBlendMode: 'multiply',
+        objectFit: 'contain',
       }}
     />
   )
