@@ -1,8 +1,43 @@
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { motion, useScroll, useSpring, useAnimationFrame } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import Layout from './Layout'
 import Section from './Section'
 import { sections } from './sections'
+
+function DvdBounce() {
+  const size = 64
+  const pos = useRef({ x: 100, y: 100 })
+  const vel = useRef({ x: 1.8, y: 1.4 })
+  const [xy, setXY] = useState({ x: 100, y: 100 })
+
+  useAnimationFrame(() => {
+    const W = window.innerWidth - size
+    const H = window.innerHeight - size
+    pos.current.x += vel.current.x
+    pos.current.y += vel.current.y
+    if (pos.current.x <= 0 || pos.current.x >= W) vel.current.x *= -1
+    if (pos.current.y <= 0 || pos.current.y >= H) vel.current.y *= -1
+    pos.current.x = Math.max(0, Math.min(W, pos.current.x))
+    pos.current.y = Math.max(0, Math.min(H, pos.current.y))
+    setXY({ x: pos.current.x, y: pos.current.y })
+  })
+
+  return (
+    <img
+      src="https://cdn.poehali.dev/projects/407aeb7d-ee5b-46b4-96c3-2b0a3a7bc4ae/bucket/4248953c-3132-4824-9a14-5aeb35a4df76.jpg"
+      alt=""
+      className="fixed z-20 pointer-events-none select-none"
+      style={{
+        left: xy.x,
+        top: xy.y,
+        width: size,
+        height: size,
+        objectFit: 'contain',
+        mixBlendMode: 'multiply',
+      }}
+    />
+  )
+}
 
 export default function LandingPage() {
   const [activeSection, setActiveSection] = useState(0)
@@ -24,30 +59,9 @@ export default function LandingPage() {
     return () => { if (container) container.removeEventListener('scroll', handleScroll) }
   }, [])
 
-  const handleNavClick = (index: number) => {
-    if (containerRef.current) {
-      containerRef.current.scrollTo({ top: index * window.innerHeight, behavior: 'smooth' })
-    }
-  }
-
   return (
     <Layout>
-      <nav className="fixed top-0 right-0 h-screen flex flex-col justify-center z-30 p-4">
-        {sections.map((section, index) => (
-          <button
-            key={section.id}
-            onClick={() => handleNavClick(index)}
-            className={`my-1 transition-all duration-300 ${index === activeSection ? 'scale-150' : 'scale-100 opacity-40'}`}
-          >
-            <img
-              src="https://cdn.poehali.dev/projects/407aeb7d-ee5b-46b4-96c3-2b0a3a7bc4ae/bucket/4248953c-3132-4824-9a14-5aeb35a4df76.jpg"
-              alt=""
-              className="w-6 h-6 object-contain rounded-full"
-              style={{ mixBlendMode: 'multiply' }}
-            />
-          </button>
-        ))}
-      </nav>
+      <DvdBounce />
       <motion.div
         className="fixed top-0 left-0 right-0 h-0.5 bg-[#C194E3] origin-left z-30"
         style={{ scaleX }}
