@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, buttonImage, images, videoUrl }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, buttonImage, buttonUrl, images, videoUrl }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-6 md:p-12 lg:p-16 scale-95 origin-left">
       {subtitle && (
@@ -81,7 +81,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
               variant="outline"
               size="lg"
               className="text-[#00B5AD] bg-transparent border-[#00B5AD] hover:bg-[#00B5AD] hover:text-white transition-colors"
-              onClick={() => window.open('https://cloud.mail.ru/public/v27L/6dpQjh6xG', '_blank')}
+              onClick={() => window.open(buttonUrl || 'https://cloud.mail.ru/public/v27L/6dpQjh6xG', '_blank')}
             >
               {buttonText}
             </Button>
