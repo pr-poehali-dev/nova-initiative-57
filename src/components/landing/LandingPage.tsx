@@ -67,7 +67,7 @@ export default function LandingPage() {
 
           {/* Правая — Презентация */}
           <motion.div
-            className="flex-1 flex flex-col justify-center p-6 md:p-8 py-[5px]"
+            className="flex-1 flex flex-col justify-center p-6 md:p-8 py-6"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
