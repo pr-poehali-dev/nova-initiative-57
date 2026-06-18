@@ -15,7 +15,7 @@ export const sections = [
   },
   {
     id: 'hero',
-    subtitle: <Badge variant="outline" className="text-neutral-700 border-neutral-400">Презентация</Badge>,
+
     title: "Презентация по теме «Что такое мемы и как они живут среди людей»",
     showButton: true,
     buttonText: 'Смотреть презентацию',
